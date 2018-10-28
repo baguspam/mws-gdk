@@ -1,0 +1,56 @@
+.card {
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.16), 0 0 2px 0 rgba(0,0,0,.12);
+    background-color: #fff;
+}
+
+.card-footer {
+    float: right;
+    margin: 0px 15px 0px 15px;
+}
+
+.card-mz-3{
+    float: left;
+    width: 25%;
+    margin: 15px 15px 0px 15px;
+}
+
+.card-mz-9{
+    float: right;
+    width: 70%;
+    margin: 15px 15px 0px 15px;
+}
+
+.card-mz-12{
+    width: 98%;
+    margin: 15px 15px 0px 15px;
+}
+.button{
+    padding: 5px 5px 10px 5px;
+}
+
+
+.container-card {
+    padding: 2px 16px;
+}
+
+@media only screen and (max-width: 768px) {
+    .card-mz-3{
+        margin: 0px;  
+        width: 100%; 
+    }
+    .card-mz-9{
+        float: right;
+        margin: 15px 0px 0px 0px;  
+        width: 100%; 
+    }
+
+    .card-mz-12{
+        margin: 0px;  
+        width: 100%; 
+    }
+
+    .card-footer{
+        margin: 0px 0px 0px 0px;  
+        width: 100%; 
+    }
+}

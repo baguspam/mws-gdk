@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  	<head>
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta name="robots" content="noindex"/>
+	    <title>PWA - Bagus Pambudi</title>
+	    <link rel="manifest" href="/manifest.json">
+	    <meta name="Description" content="A progressive web app Google Developer Kejar and Inixindo by Bagus Pambudi">
+	    <meta name="Keyword" content="A progressive web app|PWA|Google Developer Kejar|GDK|Inixindo|Bagus Pambudi|Maspamz">
+	    <link href='assets/css/mzp-template.css' rel='stylesheet' />
+	    <link href='assets/css/tabs.css' rel='stylesheet' />
+	    <link href='assets/css/calculator.css' rel='stylesheet' />
+	</head>
+<body>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" >&times;</a>
+  <div id="myShowMenu"></div>
+</div>
+
+<div class="main" >
+	<div class="topnav">
+	  <span onclick="openNav()">&#9776; </span>
+	</div>	
+	<div class="main-body ">
+		<br><br><br>
+		<div class="card card-mz-12 animated fadeInUp">
+		  <div class="container-card">
+		  	<br>
+		  	<input id="tab1" type="radio" name="tabs" checked>
+			<label for="tab1">Tugas Penjumlahan</label>
+			<input id="tab2" type="radio" name="tabs">
+			<label for="tab2">Kalkulator</label>
+
+			<section id="content1">
+			    <h2 class="text-center">Tugas Penjumlahan Angka</h2>
+			    <div class="divider"></div>
+			    <br>
+			    <form action="#" method="GET">
+			    	<input type="number" id="numb1" class="text-center" placeholder="Masukkan Angka ke 1" required>
+			    	<br><div class="text-center"><b>+</b></div>
+	  				<input type="number" id="numb2" class="text-center" placeholder="Masukkan Angka ke 2" required>
+	  				<br>
+				  <button class="readmore text-center" type="button" id="tombol" onclick="addNumber()" style="width:100%;"><strong>=</strong></button>
+				  <br>
+				  <br>
+				  <input type="text" id="numb3" class="text-center" placeholder="Hasil Penjumlahan" readonly>
+				 
+				</form>
+				</section>
+			<section id="content2">
+				<form name="calculator">
+					<table border="0" cellpadding="2" cellspacing="0" class="table-res" align="center">
+					<tr><td align="center"><input type="text" class="table-input2 text-right" name="win" value="0" maxlength='15'></td></tr>
+					<tr><td>
+						<table class="table-res2">
+						<tr>
+							<td><input type="button" value="CE" onClick="calc('CE')" class="table-input op"></td>
+							<td><input type="button" value="C" onClick="calc('C')" class="table-input op"></td>
+							<td><input type="button" value="+/-" onClick="calc('+/-')" class="table-input op"></td>
+							<td><input type="button" value="%" onClick="calc('%')" class="table-input op3"></td>
+						</tr>
+						<tr>
+							<td><input type="button" value="7" onClick="calc('7')" class="table-input"></td>
+							<td><input type="button" value="8" onClick="calc('8')" class="table-input"></td>
+							<td><input type="button" value="9" onClick="calc('9')" class="table-input"></td>
+							<td><input type="button" value="/" onClick="calc('/')" class="table-input op3"></td>
+						</tr>
+						<tr>
+							<td><input type="button" value="4" onClick="calc('4')" class="table-input"></td>
+							<td><input type="button" value="5" onClick="calc('5')" class="table-input"></td>
+							<td><input type="button" value="6" onClick="calc('6')" class="table-input"></td>
+							<td><input type="button" value="x" onClick="calc('*')" class="table-input op3"></td>
+						</tr>
+						<tr>
+							<td><input type="button" value="1" onClick="calc('1')" class="table-input"></td>
+							<td><input type="button" value="2" onClick="calc('2')" class="table-input"></td>
+							<td><input type="button" value="3" onClick="calc('3')" class="table-input"></td>
+							<td><input type="button" value="-" onClick="calc('-')" class="table-input op3"></td>
+						</tr>
+						<tr>
+							<td><input type="button" value="0" onClick="calc('0')" class="table-input"></td>
+							<td><input type="button" value="." onClick="calc('.')" class="table-input"></td>
+							<td><input type="button" value="=" onClick="calc('=')" class="table-input"></td>
+							<td><input type="button" value="+" onClick="calc('+')" class="table-input op3"></td>
+						</tr>
+						</table>
+					</td></tr>
+					</table>
+				</form>
+			</section>
+				 <br><br><br>
+			  </div>
+
+
+		</div>
+		
+		<div class="card-footer card-mz-12">
+			<p class="text-center">
+				Copyright @ 2018 - Bagus Pambudi | Thank you for Google and Inixindo
+			</p>
+			
+		</div>
+	</div>
+</div>
+
+</body>
+
+  <script src='assets/js/menu.js'></script>
+  <script src='assets/js/jquery-3.3.1.min.js'></script>
+  <script src='assets/js/html5sql.js'></script>
+  <script src='assets/js/load-sql.js'></script>
+  <script type="text/javascript">
+  	//menu = m, materi=n, tugas=t
+  	loadDb("m");
+  </script>
+
+  <script src='assets/js/add_number.js'></script>
+  <script src='assets/js/calculator.js'></script>
+
+</html>

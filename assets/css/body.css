@@ -1,0 +1,141 @@
+html, body {
+    height:100%;
+    margin: 0;
+    padding: 0px;
+    overflow: auto;
+}
+body{
+    margin:0px;
+    padding: 0px;
+    font-size: 14px;
+    font-family: 'Hind', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: rgba(0,0,0,.87);
+}
+
+.main{
+    height: 100%;
+    background-color: #E0E0E0;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.main-body{
+    height: 100%;
+    position: relative;
+}
+[class*="col-mz-"] {
+    float:left;
+}
+.text-center{
+    text-align: center;
+}
+
+.text-justify{
+    text-align: justify;
+}
+
+.text-right{
+    text-align: right;
+}
+.about-desc{
+    padding: 0px 15px 0px 15px;
+}
+.img-responsive {
+    width: 100%;
+    max-width: 172px;
+    height: auto;
+}
+h2{
+    font-weight: 400;
+    font-size: 24px;
+    font-family: Arial,Verdana,Tahoma;
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+h3{
+    font-weight: 400;
+    font-size: 20px;
+    margin: 0px 0px 5px 0px;
+}
+h5{
+    font-weight: 400;
+    font-size: 14px;
+    margin: 0px 0px 10px 0px;
+}
+a{
+    text-decoration: none;
+    color: #5D4037;
+}
+a:hover{
+     color: #795548;
+}
+.left-15{
+    padding-left:15px;
+}
+.bottom-15{
+    margin-bottom:15px;
+}
+.readmore{
+    color: #fff;
+    background-color: #5D4037!important;
+    padding: 10px;
+    border: none;
+}
+.readmore:hover{
+    background-color: #795548!important;
+    cursor: pointer;
+}
+.color-red{
+    color: red;
+}
+.divider {
+    display: block;
+    height: 1px;
+    background-color: rgba(0,0,0,.12);
+}
+
+.col-mz-1 {width: 8.33%;}
+.col-mz-2 {width: 16.66%;}
+.col-mz-3 {width: 25%;}
+.col-mz-4 {width: 33.33%;}
+.col-mz-5 {width: 41.66%;}
+.col-mz-6 {width: 50%;}
+.col-mz-7 {width: 58.33%;}
+.col-mz-8 {width: 66.66%;}
+.col-mz-9 {width: 75%;}
+.col-mz-10 {width: 83.33%;}
+.col-mz-11 {width: 91.66%;}
+.col-mz-12 {width: 100%;}
+
+.footer {
+ 
+    width: 100%;
+    background-color: #607D8B;
+    padding: 5px;
+    color: white;
+    text-align: center;
+}
+
+.button-maps{
+    top:83px;
+    right: 28px;
+    position: fixed;
+    padding: 0px;
+    width: 32px;
+    height: 32px;
+    text-align:center;
+    border-radius: 4px;
+    background-color: #fff;
+    border: 2px solid rgba(0,0,0,0.2);
+    background-clip: padding-box;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+    [class*="col-mz-"] {
+        width: 100%;
+    }
+    .main-body{
+        padding: 10px;
+    }
+}

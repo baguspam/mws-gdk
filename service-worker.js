@@ -1,39 +1,39 @@
-const staticCacheName = 'my-mwsPam-09';
+const staticCacheName = 'my-mzp';
 
-self.addEventListener('install', function(event) {
-    console.log('Installing...');
-
-    // Create new caches
-    let urlsToCaches = [
-       '/index.html',
-      '/manifest.json',
-      '/assets/css/mzp-template.css',
-      '/assets/css/menu.css',
-      '/assets/css/body.css',
-      '/assets/css/topbar-menu.css',
-      '/assets/css/card.css',
-      '/assets/css/font-awesome.min.css',
-      '/assets/css/animated.css',
-      '/assets/css/input.css',
-      '/assets/css/table.css',
-      '/assets/css/tabs.css',
-      '/assets/css/404.css',
-      '/assets/data/data_all.json',
-      '/assets/js/menu.js',
-      '/assets/js/jquery-3.3.1.min.js',
-      '/assets/js/html5sql.js',
-      '/assets/js/load-sql.js',
-      '/assets/js/like.js',
-      '/assets/js/share.js',
-      '/assets/font/fontawesome-webfont.eot',
-      '/assets/img/photo_profile.png'
-    ];
-
-    event.waitUntil(
-        caches.open(staticCacheName).then(function(cache) {
-            return cache.addAll(urlsToCaches);
-        })
-    );
+self.addEventListener("install", event => {
+  console.log('Installing...');
+  event.waitUntil(
+    caches.open(staticCacheName).then(cache => {
+      return cache
+        .addAll([
+          "/index.html",
+          "/manifest.json",
+          "/assets/css/mzp-template.css",
+          "/assets/css/menu.css",
+          "/assets/css/body.css",
+          "/assets/css/topbar-menu.css",
+          "/assets/css/card.css",
+          "/assets/css/font-awesome.min.css",
+          "/assets/css/animated.css",
+          "/assets/css/input.css",
+          "/assets/css/table.css",
+          "/assets/css/tabs.css",
+          "/assets/css/404.css",
+          "/assets/data/data_all.json",
+          "/assets/js/menu.js",
+          "/assets/js/jquery-3.3.1.min.js",
+          "/assets/js/html5sql.js",
+          "/assets/js/load-sql.js",
+          "/assets/js/like.js",
+          "/assets/js/share.js",
+          "/assets/font/fontawesome-webfont.eot",
+          "/assets/img/photo_profile.png"
+        ])
+        .catch(error => {
+          console.log("Caches open failed: " + error);
+        });
+    })
+  );
 });
 
 self.addEventListener('activate', function(event) {
@@ -54,7 +54,7 @@ self.addEventListener('activate', function(event) {
 });
 
 self.addEventListener('fetch', function(event) {
-    //console.log('Fetching...');
+    console.log('Fetching...');
 
     event.respondWith(
         caches.match(event.request).then(function(response){

@@ -13,52 +13,26 @@ xhr.onload = function(e) {
     }
 
     //tb_Page
-    var stmt1 = db.prepare("SELECT * FROM tb_page");
+    var stmt5 = db.prepare("SELECT * FROM tb_peta");
     var printDiv1 = document.getElementById('myShowJson');
     var xim1 = '{"page": [';
-    while(stmt1.step()) { //
-        var row = stmt1.getAsObject();
+    while(stmt5.step()) { //
+        var row = stmt5.getAsObject();
         xim1 += '{"id": '+row['id']+', '+
-                      '"strTitleh2": "'+row['title_h2']+'", '+
-                      '"strDesc": "'+row['description']+'", '+
-                      '"strUrlPage": "'+row['url_page']+'", '+
-                      '"intCountLike": "'+row['count_like']+'"}, ';
+                      '"strNameMap": "'+row['nama_peta']+'", '+
+                      '"strLat": "'+row['latitude']+'", '+
+                      '"strLong": "'+row['longitude']+'", '+
+                      '"strImg": "'+row['gambar']+'", '+
+                      '"strDesc": "'+row['deskripsi']+'"}, ';
     }
     xim1 = xim1.substr(0, xim1.length-2);
     xim1 +=']}';
     printDiv1.innerHTML = xim1 ;
 
-    //tb_Menu
-    var stmt2 = db.prepare("SELECT * FROM tb_menu");
-    var printDiv2 = document.getElementById('myShowJson2');
-    var xim2 = '{"menu": [';
-    while(stmt2.step()) { //
-        var row = stmt2.getAsObject();
-        xim2 += '{"id": '+row['id']+', '+
-                      '"strNameMenu": "'+row['nama_menu']+'", '+
-                      '"strUrlMenu": "'+row['url_menu']+'", '+
-                      '"strIcon": "'+row['icon']+'"}, ';
-    }
-    xim2 = xim2.substr(0, xim2.length-2);
-    xim2 +=']}';
-    printDiv2.innerHTML = xim2 ;
-
-    //tb_Menu
-    var stmt3 = db.prepare("SELECT * FROM tb_materi");
-    var printDiv3 = document.getElementById('myShowJson3');
-    var xim3 = '{"materi": [';
-    while(stmt3.step()) { //
-        var row = stmt3.getAsObject();
-        xim3 += '{"id": '+row['id']+', '+
-                      '"strNameMateri": "'+row['nama_materi']+'", '+
-                      '"strDesc": "'+row['keterangan']+'", '+
-                      '"strUrlLink": "'+row['link_materi']+'"}, ';
-    }
-    xim3 = xim3.substr(0, xim3.length-2);
-    xim3 +=']}';
-    printDiv3.innerHTML = xim3 ;
-
     //JSON all
+    var stmt1 = db.prepare("SELECT * FROM tb_page");
+    var stmt2 = db.prepare("SELECT * FROM tb_menu");
+    var stmt3 = db.prepare("SELECT * FROM tb_materi");
     var printDiv4 = document.getElementById('myShowJson4');
     var xim4 = '{"menu": [';
     while(stmt2.step()) { //
@@ -89,7 +63,7 @@ xhr.onload = function(e) {
                       '"strDesc": "'+row['keterangan']+'", '+
                       '"strUrlLink": "'+row['link_materi']+'"}, ';
     }
-    xim4 = xim4.substr(0, xim4.length-2);
+     xim4 = xim4.substr(0, xim4.length-2);
     xim4 +=']}';
     printDiv4.innerHTML = xim4 ;
 
